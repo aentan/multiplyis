@@ -1,0 +1,14 @@
+@import "../less/buttons.less";
+
+// Link buttons
+// -------------------------
+
+// Danger link for destructive actions
+.btn-danger-link {
+  .btn-link();
+  color: @btn-danger-bg;
+  &:hover,
+  &:focus {
+    color: @btn-danger-border;
+  }
+}

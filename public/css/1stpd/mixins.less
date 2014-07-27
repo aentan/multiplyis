@@ -1,0 +1,21 @@
+@import "../less/mixins.less";
+
+.generate-vertical-margins(@n, @i: 0) when (@i =< @n) {
+  .bottom-margins-@{i} {
+    margin-bottom: (@i * @line-height-computed);
+  }
+  .top-margins-@{i} {
+    margin-top: (@i * @line-height-computed);
+  }
+  .generate-vertical-margins(@n, (@i + 1));
+}
+
+.generate-vertical-negative-margins(@n, @i: @n) when (@i >= 1) {
+  .bottom-margins-n@{i} {
+    margin-bottom: -(@i * @line-height-computed);
+  }
+  .top-margins-n@{i} {
+    margin-top: -(@i * @line-height-computed);
+  }
+  .generate-vertical-negative-margins(@n, (@i - 1));
+}

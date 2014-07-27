@@ -1,0 +1,4 @@
+*.css
+.DS_Store
+
+public/js/.DS_Store
