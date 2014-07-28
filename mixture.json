@@ -7,12 +7,12 @@
   "lintScripts": false,
   "modelSource": null,
   "preprocessorLocations": [
-    "public"
+    "/public"
   ],
   "preprocessorScriptOutput": "public/js",
   "preprocessorStyleOutput": "public/css",
-  "projectDescription": "Homepage for 1ST/d",
-  "projectName": "1stad",
+  "projectDescription": "Homepage for Multiply",
+  "projectName": "multiplyis",
   "publishedId": null,
   "serverHostname": null,
   "serverPort": null,

@@ -1,5 +1,18 @@
 @import "../less/mixins.less";
 
+
+.button-variant(@color; @background; @border) {
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-color: lighten(@background, 8%);
+        border-color: lighten(@border, 12%);
+  }
+}
+
+
 .generate-vertical-margins(@n, @i: 0) when (@i =< @n) {
   .bottom-margins-@{i} {
     margin-bottom: (@i * @line-height-computed);

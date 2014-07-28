@@ -1,0 +1,173 @@
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+// Reset
+@import "normalize.less";
+@import "print.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "type.less";
+@import "grid.less";
+@import "forms.less";
+@import "buttons.less";
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
+
+
+// Vertical Offsets
+//
+// For spacing between rows
+
+.generate-vertical-margins(5);
+.generate-vertical-negative-margins(5);
+
+
+// Full-heightness
+
+body {
+  position: relative;
+}
+
+// Content
+
+#content {
+}
+
+
+// Header
+
+#header {
+  .make-md-column(4);
+  background-color: @brand-primary;
+  height: 272px;
+  color: white;
+  position: relative;
+  h1 {
+    margin: 0;
+    position: relative;
+    top: 24px;
+    a {
+      background-image: inline-image('../img/multiply_logo.png');
+      background-repeat: no-repeat;
+      background-size: 32px 24px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      display: block;
+      padding-left: 36px;
+      line-height: 24px;
+      text-transform: lowercase;
+    }
+  }
+  p {
+    .lead();
+    padding-right: 48px;
+    position: absolute;
+    bottom: 24px;
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  #header {
+    .make-md-column(12);
+    height: 400px;
+    p {
+      position: relative;
+      top: 176px;
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+}
+
+
+// Blocks
+
+.block {
+  .make-sm-column(6);
+  .make-md-column(4);
+  padding-bottom: 32px;
+  &:after {
+    background-color: white;
+    content: "";
+    width: 24px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .block {
+  }
+}
+
+
+// Courses
+
+.course {
+  h2 {
+    margin-bottom: 0;
+  }
+  .course-meta {
+    .clearfix();
+    display: table;
+    border-top: 1px solid @hr-border;
+    border-bottom: 1px solid @hr-border;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    margin-right: -24px;
+    .course-features {
+      display: table-cell;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      width: 70%;
+      p {
+        line-height: 1.423;
+        .small();
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    .course-enroll {
+      display: table-cell;
+      border-left: 1px solid @hr-border;
+      width: 30%;
+      padding: 0;
+      right: -1px;
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+      .course-price {
+        position: relative;
+        top: 10px;
+        .course-price-value {
+          display: block;
+          font-size: @font-size-large;
+          font-weight: 600;
+          line-height: 20px;
+        }
+      }
+      .btn {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+// About
+
+#about {
+  .make-sm-column(12);
+  .make-md-column(4);
+}

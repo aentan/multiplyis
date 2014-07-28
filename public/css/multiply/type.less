@@ -1,0 +1,19 @@
+@import "../less/type.less";
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+
+// Body text
+// -------------------------
+
+.lead {
+  margin-bottom: @line-height-computed;
+  font-size: floor((@font-size-base * 1.375));
+  line-height: 1.273;
+
+  @media (min-width: @screen-md-min) {
+    font-size: (@font-size-base * 2);
+  }
+}
