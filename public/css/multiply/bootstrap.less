@@ -57,18 +57,18 @@ body {
       background-repeat: no-repeat;
       background-size: 32px 24px;
       font-size: 20px;
-      font-weight: bold;
+      font-weight: @headings-font-weight;
+      font-family: @headings-font-family;
       color: white;
       display: block;
       padding-left: 36px;
       line-height: 24px;
-      text-transform: lowercase;
     }
   }
   .social-twitter {
     .hide-text();
     position: relative;
-    top: 20px;
+    top: 18px;
     background-image: inline-image('../img/social_micro_twitter.png');
     background-size: 32px 32px;
     float: right;
@@ -126,7 +126,7 @@ body {
       display: table-cell;
       padding-top: 16px;
       padding-bottom: 16px;
-      width: 70%;
+      width: 60%;
       p {
         line-height: 1.423;
         .small();
@@ -138,7 +138,7 @@ body {
     .course-enroll {
       display: table-cell;
       border-left: 1px solid @hr-border;
-      width: 30%;
+      width: 40%;
       padding: 0;
       right: -1px;
       text-align: center;
