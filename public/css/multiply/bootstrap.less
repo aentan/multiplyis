@@ -13,6 +13,9 @@
 @import "forms.less";
 @import "buttons.less";
 
+// Components w/ JavaScript
+@import "popovers.less";
+
 // Utility classes
 @import "utilities.less";
 @import "responsive-utilities.less";
@@ -32,21 +35,20 @@ body {
   position: relative;
 }
 
-// Content
-
-#content {
-}
-
 
 // Header
 
 #header {
   .make-md-column(4);
   background-color: @brand-primary;
-  height: 272px;
   color: white;
   position: relative;
+  height: 72px;
+  .home & {
+    height: 272px;
+  }
   h1 {
+    float: left;
     margin: 0;
     position: relative;
     top: 24px;
@@ -63,8 +65,18 @@ body {
       text-transform: lowercase;
     }
   }
+  .social-twitter {
+    .hide-text();
+    position: relative;
+    top: 20px;
+    background-image: inline-image('../img/social_micro_twitter.png');
+    background-size: 32px 32px;
+    float: right;
+    width: 32px;
+    height: 32px;
+  }
   p {
-    .lead();
+    .lead();  
     padding-right: 48px;
     position: absolute;
     bottom: 24px;
@@ -74,12 +86,14 @@ body {
 @media (min-width: @screen-sm-min) {
   #header {
     .make-md-column(12);
-    height: 400px;
-    p {
-      position: relative;
-      top: 176px;
-      text-align: center;
-      padding-right: 0;
+    .home & {
+      height: 400px;
+      p {
+        position: relative;
+        top: 176px;
+        text-align: center;
+        padding-right: 0;
+      }
     }
   }
 }
@@ -91,20 +105,6 @@ body {
   .make-sm-column(6);
   .make-md-column(4);
   padding-bottom: 32px;
-  &:after {
-    background-color: white;
-    content: "";
-    width: 24px;
-    height: 1px;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-  }
-}
-
-@media (min-width: @screen-md-min) {
-  .block {
-  }
 }
 
 
@@ -171,3 +171,27 @@ body {
   .make-sm-column(12);
   .make-md-column(4);
 }
+
+
+// Choose date
+
+.enroll-panel {
+  .bottom-line();
+  border-right: 1px solid @hr-border;
+  padding-bottom: 32px;
+}
+
+@media (max-width: @screen-md-max) {
+  .enroll-panel {
+    border-right: 0;
+  }
+}
+
+#choose-date {
+  .make-md-column(6);
+}
+
+#payment {
+  .make-md-column(6);
+}
+

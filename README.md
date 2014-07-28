@@ -1,3 +1,3 @@
-# One Strange Thought A Day
+# Multiply
 
-Subscribe at [www.onestrangethoughtaday.com](www.onestrangethoughtaday.com).
+Visit [www.multiply.is](www.multiply.is).

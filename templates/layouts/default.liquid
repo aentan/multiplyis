@@ -7,7 +7,7 @@
     {{ "bootstrap.css" | asset_url | stylesheet_tag }}
     {% include "webfonts" %}
   </head>
-  <body>
+  <body class="{% block bodyclass %}{% endblock %}">
     {% block content %}{% endblock %}
     <script src="//code.jquery.com/jquery.min.js"></script>
     {{ "bootstrap.js" | asset_url | script_tag }}

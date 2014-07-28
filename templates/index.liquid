@@ -1,3 +1,4 @@
+{% block bodyclass %}home{% endblock %}
 {% block content %}
 <div id="content" class="container-fluid">
 
@@ -5,6 +6,7 @@
 
     <header id="header">
       <h1><a href="/">Multiply</a></h1>
+      <a href="https://twitter.com/itsmultiply" class="social-twitter">Follow Multiply on Twitter</a>
       <p>Learn to code with affordable courses taught by real coders.</p>
     </header>
 
@@ -23,7 +25,7 @@
             <span class="course-price-value">S$1,250</span>
             <span class="course-price-unit">/person</span>
           </div>
-          <a class="btn btn-primary">Enroll</a>
+          <button type="button" class="btn-enroll btn btn-primary" data-toggle="popover" title="Choose Date" data-content="<ul class='list-unstyled'><li><span class='disabled'><del>Aug 13, 2013</del></span></li><li><a href='#'>Sep 28, 2013</a></li><li><a href='#'>Oct 15, 2013</a></li></ul>">Enroll</button>
         </div>
       </div>
       <p>A wide range of modules designed to help you create a responsive website from scratch. We’ll even kit you out with Amazon hosting to push your labour of love into the clouds of possibilities.</p>
@@ -45,7 +47,7 @@
             <span class="course-price-value">S$875</span>
             <span class="course-price-unit">/person</span>
           </div>
-          <a class="btn btn-primary">Enroll</a>
+          <a class="btn btn-primary disabled">Coming Soon</a>
         </div>
       </div>
       <p>Understand the finer points of user experience in this course, where you’ll learn interface tools that’ll help you put the consumer first.</p>

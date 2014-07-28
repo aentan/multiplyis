@@ -32,3 +32,16 @@
   }
   .generate-vertical-negative-margins(@n, (@i - 1));
 }
+
+.bottom-line() {
+  border-bottom: 1px solid @hr-border;
+  &:after {
+    background-color: white;
+    content: "";
+    width: 24px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+  }
+}

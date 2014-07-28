@@ -67,7 +67,7 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    "brandon-grotesque", sans-serif;
-@headings-font-weight:    600;
+@headings-font-weight:    700;
 @headings-line-height:    1.4;
 @headings-color:          inherit;
 
@@ -152,12 +152,12 @@
 //##
 
 //** `<input>` background color
-@input-bg:                       #9494ff;
+@input-bg:                       white;
 //** `<input disabled>` background color
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color:                    white;
+@input-color:                    @brand-primary;
 //** `<input>` border color
 @input-border:                   #ccc;
 //** `<input>` border radius
@@ -166,8 +166,8 @@
 @input-border-focus:             #66afe9;
 
 //** Placeholder text color
-@input-color-placeholder:        white;
-@input-focused-color-placeholder: #c0c1fe;
+@input-color-placeholder:        @brand-primary;
+@input-focused-color-placeholder: desaturate(lighten(@brand-primary, 40%), 40%);
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -499,7 +499,7 @@
 @popover-fallback-border-color:       #ccc;
 
 //** Popover title background color
-@popover-title-bg:                    darken(@popover-bg, 3%);
+@popover-title-bg:                    @popover-bg;
 
 //** Popover arrow width
 @popover-arrow-width:                 10px;
@@ -561,7 +561,7 @@
 //** Modal backdrop opacity
 @modal-backdrop-opacity:      .5;
 //** Modal header border color
-@modal-header-border-color:   #e5e5e5;
+@modal-header-border-color:   @brand-primary;
 //** Modal footer border color
 @modal-footer-border-color:   @modal-header-border-color;
 
