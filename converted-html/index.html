@@ -22,16 +22,28 @@
 
   </head>
   <body class="home">
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=181743778524471&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     
+<header id="header">
+  <div class="container-fluid">
+    <h1><a href="/">Multiply</a></h1>
+    <a href="https://twitter.com/itsmultiply" class="social-twitter">Follow Multiply on Twitter</a>
+    <p>Learn to code with affordable courses taught by real coders.</p>
+  </div>
+</header>
+
 <div id="content" class="container-fluid">
 
   <div class="row">
-
-    <header id="header">
-      <h1><a href="/">Multiply</a></h1>
-      <a href="https://twitter.com/itsmultiply" class="social-twitter">Follow Multiply on Twitter</a>
-      <p>Learn to code with affordable courses taught by real coders.</p>
-    </header>
 
     <div class="block course">
       <h2>HTML5 &amp; CSS</h2>
@@ -93,8 +105,12 @@
 
 </div>
 
+
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="/public/js/bootstrap.min.js"></script>
     <script src="/public/js/application.min.js"></script>
+
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52e3b7077312b612"></script>
+
   </body>
 </html>

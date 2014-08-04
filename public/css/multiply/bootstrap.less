@@ -32,17 +32,21 @@
 .generate-vertical-negative-margins(5);
 
 
-// Full-heightness
+// Body
 
 body {
   position: relative;
+  &.thanks {
+    .container {
+      max-width: 640px;
+    }
+  }
 }
 
 
 // Header
 
 #header {
-  .make-md-column(4);
   background-color: @brand-primary;
   color: white;
   position: relative;
@@ -88,7 +92,6 @@ body {
 
 @media (min-width: @screen-sm-min) {
   #header {
-    .make-md-column(12);
     .home & {
       height: 400px;
       p {
@@ -197,5 +200,10 @@ body {
 
 #payment {
   .make-md-column(6);
+}
+
+
+#thanks {
+  .container();
 }
 
