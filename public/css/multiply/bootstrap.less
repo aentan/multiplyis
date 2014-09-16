@@ -17,6 +17,7 @@
 @import "component-animations.less";
 
 // Components w/ JavaScript
+@import "dropdowns.less";
 @import "popovers.less";
 
 // Utility classes
@@ -72,15 +73,25 @@ body {
       line-height: 24px;
     }
   }
-  .social-twitter {
-    .hide-text();
+  .header-nav {
     position: relative;
     top: 18px;
-    background-image: inline-image('../img/social_micro_twitter.png');
-    background-size: 32px 32px;
     float: right;
-    width: 32px;
-    height: 32px;
+    #selector-btn {
+      float: left;
+      color: white;
+      .caret {
+        color: white;
+      }
+    }
+    .social-twitter {
+      .hide-text();
+      float: left;
+      background-image: inline-image('../img/social_micro_twitter.png');
+      background-size: 32px 32px;
+      width: 32px;
+      height: 32px;
+    }
   }
   p {
     .lead();  
@@ -205,5 +216,80 @@ body {
 
 #thanks {
   .container();
+}
+
+
+// Fullscreen selector
+
+#fs-selector {
+  .transition(top 0.4s ease-in-out);
+  background: @brand-primary;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  #fs-logo {
+    float: left;
+    margin: 0;
+    position: relative;
+    top: 24px;
+    left: 24px;
+    background-image: inline-image('../img/multiply_logo.png');
+    background-repeat: no-repeat;
+    background-size: 32px 24px;
+    font-size: 20px;
+    font-weight: @headings-font-weight;
+    font-family: @headings-font-family;
+    color: white;
+    display: block;
+    padding-left: 40px;
+    line-height: 24px;
+  }
+  #fs-close {
+    position: relative;
+    float: right;
+    width: 24px;
+    line-height: 18px;
+    padding-top: 6px;
+    height: 24px;
+    top: 24px;
+    right: 24px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+  }
+  #fs-list {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -72px;
+    text-align: center;
+    width: 100%;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        a {
+          display: block;
+          font-size: 24px;
+          line-height: 24px;
+          padding: 12px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+html {
+  height: 100%;
+}
+body.noscroll {
+  overflow: hidden;
+  height: 100%;
+  #fs-selector {
+    top: 0;
+  }
 }
 
